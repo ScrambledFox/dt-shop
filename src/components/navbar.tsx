@@ -1,12 +1,18 @@
 import Image from "next/image";
 
 import { Dropdown, Button } from "@nextui-org/react";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function NavBar() {
+  const router = useRouter();
+
   return (
-    <div className="h-32 w-screen flex gap-10 items-center justify-center">
+    <div className="h-32 w-screen flex gap-48 items-center justify-center">
       <div className="flex flex-shrink flex-grow-1">
-        <Image src={"/favicon.ico"} width={48} height={48} alt={"Logo"} />
+        <Link href={"/"}>
+          <Image src={"/favicon.ico"} width={48} height={48} alt={"Logo"} />
+        </Link>
       </div>
       <div className="flex flex-shrink flex-grow-4">
         <Dropdown>
@@ -23,7 +29,9 @@ export default function NavBar() {
             <Dropdown.Item key="generation">Experience Creation</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
-        <Button light>Pricing</Button>
+        <Button auto light onClick={() => router.push("/pricing")}>
+          Pricing
+        </Button>
         <Dropdown>
           <Dropdown.Button light>Why us?</Dropdown.Button>
           <Dropdown.Menu aria-label="why-us">
@@ -31,10 +39,12 @@ export default function NavBar() {
             <Dropdown.Item key="generation">Experience Creation</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
-        <Button light>Contact Us</Button>
+        <Button auto light>
+          Contact Us
+        </Button>
       </div>
       <div className="flex flex-grow-1">
-        <Button light bordered>
+        <Button light bordered rounded>
           Try for Free
         </Button>
       </div>

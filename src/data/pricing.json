@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Starter",
+        "description": "Getting started with Shapeshift",
+        "price": 9.99,
+        "isMostPopular": false,
+        "features": [
+            "Personalised digital twin transformation",
+            "Quick support response within 1 day"
+        ]
+    },
+    {
+        "title": "Standard",
+        "description": "Getting more out of Shapeshift",
+        "price": 22.99,
+        "isMostPopular": true,
+        "features": [
+            "Everything of Starter Tier",
+            "Access to the Shapeshift API",
+            "24/7 support service"
+        ]
+    },
+    {
+        "title": "Premium",
+        "description": "Getting started with Shapeshift",
+        "price": 29.99,
+        "isMostPopular": false,
+        "features": [
+            "Everything of Standard Tier",
+            "Pro-active data-cleaning service",
+            "One-on-One digital profile consultation"
+        ]
+    }
+]
