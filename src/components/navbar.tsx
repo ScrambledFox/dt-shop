@@ -11,14 +11,14 @@ export default function NavBar() {
       <div className="flex flex-shrink flex-grow-4">
         <Dropdown>
           <Dropdown.Button light>Products</Dropdown.Button>
-          <Dropdown.Menu aria-label="Products">
+          <Dropdown.Menu aria-label="products">
             <Dropdown.Item key="cleaning">Data Cleaning</Dropdown.Item>
             <Dropdown.Item key="generation">Experience Creation</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
         <Dropdown>
           <Dropdown.Button light>Solutions</Dropdown.Button>
-          <Dropdown.Menu aria-label="Products">
+          <Dropdown.Menu aria-label="solutions">
             <Dropdown.Item key="cleaning">Data Cleaning</Dropdown.Item>
             <Dropdown.Item key="generation">Experience Creation</Dropdown.Item>
           </Dropdown.Menu>
@@ -26,7 +26,7 @@ export default function NavBar() {
         <Button light>Pricing</Button>
         <Dropdown>
           <Dropdown.Button light>Why us?</Dropdown.Button>
-          <Dropdown.Menu aria-label="Products">
+          <Dropdown.Menu aria-label="why-us">
             <Dropdown.Item key="cleaning">Data Cleaning</Dropdown.Item>
             <Dropdown.Item key="generation">Experience Creation</Dropdown.Item>
           </Dropdown.Menu>
