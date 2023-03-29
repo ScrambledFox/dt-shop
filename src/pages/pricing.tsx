@@ -23,7 +23,7 @@ export default function Pricing() {
       <Head>
         <title>{"ShapeShift - Pricing"}</title>
       </Head>
-      <main>
+      <main className=" h-full">
         <Grid.Container gap={2} justify="center">
           {PricingData.map((data, index) => (
             <Card key={index}>

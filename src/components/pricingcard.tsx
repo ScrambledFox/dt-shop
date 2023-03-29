@@ -29,13 +29,7 @@ export default function PricingCard({
 }: PricingCardProps) {
   return (
     <Card className={isMostPopular ? "" : ""}>
-      <Card.Body
-        className={
-          isMostPopular
-            ? "bg-primary-50 border-4 border-primary-300 rounded-xl"
-            : ""
-        }
-      >
+      <Card.Body className={isMostPopular ? "bg-primary-50 rounded-xl" : ""}>
         <div className={"text-center h-full"}>
           {isMostPopular && (
             <p className="text-gray-600 sm:text-xs">🥇 Most chosen</p>
@@ -48,7 +42,7 @@ export default function PricingCard({
             <span className="mr-2 text-5xl font-extrabold">{"€" + price}</span>
             <span className="text-gray-500 dark:text-gray-400">/month</span>
           </div>
-          <ul role="list" className="mb-8 space-y-4 text-left">
+          <ul role="list" className="m-auto mb-8 w-2/3 space-y-4 text-left">
             {features?.map((feature, index) => {
               return <Feature key={index} text={feature} />;
             })}

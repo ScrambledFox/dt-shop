@@ -13,7 +13,7 @@ type LayoutProps = {
 export default function Layout({ children }: LayoutProps) {
   return (
     <SSRProvider>
-      <div className="w-screen h-screen bg-gradient-texture">
+      <div className="flex flex-col min-h-screen bg-gradient-texture">
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta name="title" content={siteTitle} />
@@ -24,7 +24,7 @@ export default function Layout({ children }: LayoutProps) {
         </Head>
 
         <NavBar />
-        <main className="w-2/3 mx-auto">{children}</main>
+        <main className="flex-1 w-2/3 mx-auto">{children}</main>
         <Footer />
       </div>
     </SSRProvider>

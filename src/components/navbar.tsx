@@ -8,7 +8,7 @@ export default function NavBar() {
   const router = useRouter();
 
   return (
-    <div className="h-32 w-screen flex gap-48 items-center justify-center">
+    <div className="h-32 flex gap-48 items-center justify-center">
       <div className="flex flex-shrink flex-grow-1">
         <Link href={"/"}>
           <Image src={"/favicon.ico"} width={48} height={48} alt={"Logo"} />
@@ -18,27 +18,33 @@ export default function NavBar() {
         <Dropdown>
           <Dropdown.Button light>Products</Dropdown.Button>
           <Dropdown.Menu aria-label="products">
-            <Dropdown.Item key="cleaning">Data Cleaning</Dropdown.Item>
-            <Dropdown.Item key="generation">Experience Creation</Dropdown.Item>
+            <Dropdown.Item key="cleaning">
+              Digital Twin Transformation
+            </Dropdown.Item>
+            <Dropdown.Item key="generation">Shapeshift API</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
-        <Dropdown>
+        {/* <Dropdown>
           <Dropdown.Button light>Solutions</Dropdown.Button>
           <Dropdown.Menu aria-label="solutions">
             <Dropdown.Item key="cleaning">Data Cleaning</Dropdown.Item>
             <Dropdown.Item key="generation">Experience Creation</Dropdown.Item>
+            <Dropdown.Item key="generation">Digital Twin T</Dropdown.Item>
           </Dropdown.Menu>
-        </Dropdown>
+        </Dropdown> */}
         <Button auto light onClick={() => router.push("/pricing")}>
           Pricing
         </Button>
-        <Dropdown>
+        {/* <Dropdown>
           <Dropdown.Button light>Why us?</Dropdown.Button>
           <Dropdown.Menu aria-label="why-us">
             <Dropdown.Item key="cleaning">Data Cleaning</Dropdown.Item>
             <Dropdown.Item key="generation">Experience Creation</Dropdown.Item>
           </Dropdown.Menu>
-        </Dropdown>
+        </Dropdown> */}
+        <Button auto light onClick={() => router.push("/pricing")}>
+          Why us?
+        </Button>
         <Button auto light>
           Contact Us
         </Button>
