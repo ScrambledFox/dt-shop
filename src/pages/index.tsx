@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 
 import Layout, { siteTitle } from "@/components/layout";
 import { Button } from "@nextui-org/react";
@@ -14,11 +13,11 @@ export default function Home() {
       <main className="h-full">
         <div className="flex flex-row gap-8 mt-24 mb-28">
           <div className="flex-1 flex flex-col gap-2">
-            <h2 className="text-4xl text-primary-900">
+            <h2 className="text-4xl text-slate-800">
               {"we understand that managing online presence is difficult"}
             </h2>
-            <span className="border-t-2 border-primary-800 mt-2" />
-            <h1 className="text-6xl font-semibold text-primary-700 mt-2">
+            <span className="border-t-2 border-slate-700 mt-2" />
+            <h1 className="text-6xl font-semibold text-slate-900 mt-2">
               {"We'll handle that"}
             </h1>
             <p className="mt-4 text-justify">
@@ -30,11 +29,11 @@ export default function Home() {
               id="buttons"
               className="flex flex-row gap-4 mt-4 justify-center"
             >
-              <Button href="#" light rounded auto>
-                Learn more
+              <Button href="#" light bordered rounded auto>
+                {"Learn more"}
               </Button>
-              <Button href="#" bordered rounded>
-                Try for free
+              <Button href="#" color={"primary"} rounded>
+                {"Get started"}
               </Button>
             </div>
           </div>

@@ -19,14 +19,12 @@ export default function NavBar() {
   return (
     <div className="h-32 flex gap-48 items-center justify-center">
       <div className="flex flex-shrink flex-grow-1">
-        <Link href={"/"}>
-          <Image
-            src={"/logo/logo.svg"}
-            className="transition duration-250 ease-in-out transform hover:scale-110"
-            width={48}
-            height={48}
-            alt={"Logo"}
-          />
+        <Link
+          className="flex gap-4 text-slate-900 transition duration-300 ease-in-out transform hover:scale-105"
+          href={"/"}
+        >
+          <h1>{"ShapeShift"}</h1>
+          <Image src={"/logo/logo.svg"} width={64} height={64} alt={"Logo"} />
         </Link>
       </div>
       <div className="flex flex-shrink flex-grow-4">
