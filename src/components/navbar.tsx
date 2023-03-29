@@ -35,18 +35,15 @@ export default function NavBar() {
         <Button auto light onClick={() => router.push("/pricing")}>
           Pricing
         </Button>
-        {/* <Dropdown>
+        <Dropdown>
           <Dropdown.Button light>Why us?</Dropdown.Button>
           <Dropdown.Menu aria-label="why-us">
-            <Dropdown.Item key="cleaning">Data Cleaning</Dropdown.Item>
-            <Dropdown.Item key="generation">Experience Creation</Dropdown.Item>
+            <Dropdown.Item key="team">Our team</Dropdown.Item>
+            <Dropdown.Item key="culture">Our culture</Dropdown.Item>
           </Dropdown.Menu>
-        </Dropdown> */}
-        <Button auto light onClick={() => router.push("/pricing")}>
-          Why us?
-        </Button>
-        <Button auto light>
-          Contact Us
+        </Dropdown>
+        <Button auto light onClick={() => router.push("/contact")}>
+          Contact us
         </Button>
       </div>
       <div className="flex flex-grow-1">

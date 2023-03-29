@@ -12,13 +12,15 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <main>
-        <div className="flex flex-row mt-24 mb-28">
+        <div className="flex flex-row gap- mt-24 mb-28">
           <div className="flex-1 flex flex-col gap-2">
             <h2 className="text-4xl text-sky-900">
               {"we understand that managing online presence is difficult"}
             </h2>
-            <span className="border-t-2 border-sky-800" />
-            <h1 className="text-6xl text-sky-700">{"We'll handle that"}</h1>
+            <span className="border-t-2 border-sky-800 mt-2" />
+            <h1 className="text-6xl text-sky-700 mt-2">
+              {"We'll handle that"}
+            </h1>
             <p className="mt-4">
               {
                 "Your online presence is crucial for professional success. Whether you're a business owner, entrepreneur, or job seeker, having a strong digital profile can make all the difference. That's where we come in. Our team of experts is here to help you improve your digital profile, so you can showcase your skills, expertise, and achievements in the best possible way. With our tailored digital profile improvement services, we aim to empower you to achieve your career goals and stand out in the digital crowd."
@@ -28,7 +30,7 @@ export default function Home() {
               id="buttons"
               className="flex flex-row gap-4 mt-4 justify-center"
             >
-              <Button href="#" light rounded>
+              <Button href="#" light rounded auto>
                 Learn more
               </Button>
               <Button href="#" bordered rounded>
@@ -37,10 +39,10 @@ export default function Home() {
             </div>
           </div>
           <Image
-            className="flex-1"
-            width={200}
-            height={200}
-            src={"/media/front.png"}
+            className=" flex-1 select-none"
+            width={500}
+            height={500}
+            src={"/media/front-cropped.png"}
             alt="Woman looking over the beach with her dog."
           />
         </div>

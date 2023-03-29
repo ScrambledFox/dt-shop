@@ -30,6 +30,7 @@ export default function Footer() {
         <span className="border-b-2 flex-grow" />
       </div>
       <div className="text-center mt-6 pb-6">
+        <p>ShapeShift has been founded with ❤ for our customers</p>
         <p>© Copyright Shapeshift B.V. 2023</p>
       </div>
     </div>
