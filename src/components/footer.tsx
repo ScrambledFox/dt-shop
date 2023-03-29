@@ -8,11 +8,16 @@ export default function Footer() {
     <div className="bg-slate-700 text-slate-300 min-h-fit">
       <div className=" flex gap-32 justify-center pt-6">
         <div className="flex flex-col text-center">
+          <h3 className="text-white text-xl">Products</h3>
+          <Link href={"/transformation"}>Digital Twin Transformation</Link>
+          <Link href={"/api"}>ShapeShift API</Link>
+        </div>
+        <div className="flex flex-col text-center">
           <h3 className="text-white text-xl">Company</h3>
-          <Link href={""}>Our team</Link>
-          <Link href={""}>Portfolio</Link>
-          <Link href={""}>Privacy Policy</Link>
-          <Link href={""}>User Policy</Link>
+          <Link href={"/team"}>Our team</Link>
+          <Link href={"/culture"}>Portfolio</Link>
+          <Link href={"/privacypolicy"}>Privacy Policy</Link>
+          <Link href={"/userpolicy"}>User Policy</Link>
         </div>
         <div className="flex flex-col text-center">
           <h3 className="text-white text-xl">Latest posts</h3>
@@ -30,7 +35,7 @@ export default function Footer() {
         <span className="border-b-2 flex-grow" />
       </div>
       <div className="text-center mt-6 pb-6">
-        <p>ShapeShift has been founded with ❤ for our customers</p>
+        <p>ShapeShift has been founded with ❤ for a better future</p>
         <p>© Copyright Shapeshift B.V. 2023</p>
       </div>
     </div>

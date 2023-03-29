@@ -9,14 +9,6 @@ type CardProps = {
   children: JSX.Element | JSX.Element[];
 };
 
-const Card = ({ children }: CardProps) => {
-  return (
-    <Grid xs={8} md={4}>
-      {children}
-    </Grid>
-  );
-};
-
 export default function Pricing() {
   return (
     <Layout>
@@ -26,7 +18,7 @@ export default function Pricing() {
       <main className="h-full">
         <Grid.Container gap={2} justify="center">
           {PricingData.map((data, index) => (
-            <Card key={index}>
+            <Grid xs={12} sm={4} key={index}>
               <PricingCard
                 title={data.title}
                 description={data.description}
@@ -34,7 +26,7 @@ export default function Pricing() {
                 isMostPopular={data.isMostPopular}
                 features={data.features}
               />
-            </Card>
+            </Grid>
           ))}
         </Grid.Container>
       </main>

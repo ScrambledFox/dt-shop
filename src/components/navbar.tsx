@@ -32,11 +32,11 @@ export default function NavBar() {
       <div className="flex flex-shrink flex-grow-4">
         <Dropdown>
           <Dropdown.Button light>{"Products"}</Dropdown.Button>
-          <Dropdown.Menu aria-label="products">
-            <Dropdown.Item key="cleaning">
+          <Dropdown.Menu aria-label="products" onAction={dropdownNavigate}>
+            <Dropdown.Item key="transformation">
               {"Digital Twin Transformation"}
             </Dropdown.Item>
-            <Dropdown.Item key="generation">{"Shapeshift API"}</Dropdown.Item>
+            <Dropdown.Item key="api">{"Shapeshift API"}</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
         <Button auto light onClick={() => router.push("/pricing")}>
@@ -54,7 +54,7 @@ export default function NavBar() {
         </Button>
       </div>
       <div className="flex flex-grow-1">
-        <Button light bordered rounded>
+        <Button light bordered rounded onClick={() => router.push("/try")}>
           {"Try for Free"}
         </Button>
       </div>
