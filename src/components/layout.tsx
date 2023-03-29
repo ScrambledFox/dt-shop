@@ -13,7 +13,7 @@ type LayoutProps = {
 export default function Layout({ children }: LayoutProps) {
   return (
     <SSRProvider>
-      <div className="flex flex-col min-h-screen bg-gradient-texture">
+      <div className="flex flex-col min-h-screen bg-gradient-to-br from-sky-50 to-violet-100">
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta name="title" content={siteTitle} />

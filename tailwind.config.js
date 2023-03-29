@@ -18,7 +18,7 @@ module.exports = {
         },
       },
       backgroundImage: {
-        "gradient-texture": "url('/media/bg.svg')",
+        "gradient-texture": "url('/bg.svg')",
       },
     },
   },

@@ -11,17 +11,17 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <main>
-        <div className="flex flex-row gap- mt-24 mb-28">
+      <main className="h-full">
+        <div className="flex flex-row gap-8 mt-24 mb-28">
           <div className="flex-1 flex flex-col gap-2">
-            <h2 className="text-4xl text-sky-900">
+            <h2 className="text-4xl text-primary-900">
               {"we understand that managing online presence is difficult"}
             </h2>
-            <span className="border-t-2 border-sky-800 mt-2" />
-            <h1 className="text-6xl text-sky-700 mt-2">
+            <span className="border-t-2 border-primary-800 mt-2" />
+            <h1 className="text-6xl font-semibold text-primary-700 mt-2">
               {"We'll handle that"}
             </h1>
-            <p className="mt-4">
+            <p className="mt-4 text-justify">
               {
                 "Your online presence is crucial for professional success. Whether you're a business owner, entrepreneur, or job seeker, having a strong digital profile can make all the difference. That's where we come in. Our team of experts is here to help you improve your digital profile, so you can showcase your skills, expertise, and achievements in the best possible way. With our tailored digital profile improvement services, we aim to empower you to achieve your career goals and stand out in the digital crowd."
               }
@@ -42,7 +42,7 @@ export default function Home() {
             className=" flex-1 select-none"
             width={500}
             height={500}
-            src={"/media/front-cropped.png"}
+            src={"/front-cropped.png"}
             alt="Woman looking over the beach with her dog."
           />
         </div>

@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Mats Erdkamp",
+        "role": "CEO",
+        "description": "Erdkamp has lead multiple innovative companies in the AI and blockchain space. He is a serial entrepreneur and has been involved in the development of several successful startups. Erdkamp is a strong believer in the potential of blockchain technology and is passionate about the future of the AI industry.",
+        "image": "mats.png",
+        "portfolio": "https://google.com/"
+    },
+    {
+        "name": "Nikki Mureau",
+        "role": "COO",
+        "description": "Mureau has a passion in leadership and management. She is responsible for the day-to-day operations of the company and is a strong believer in the potential of blockchain technology. Mureau has a background in business management for over 10 years.",
+        "image": "nikki.png",
+        "portfolio": "https://google.com/"
+    },
+    {
+        "name": "Davide Stefani",
+        "role": "CFO",
+        "description": "Stefani is responsible for the financial management of the company. He has a background in finance from the school of business in Milano and has been working in the financial industry for over 10 years. Stefani is a strong believer in the potential of blockchain technology and is passionate about the future of the AI industry.",
+        "image": "davide.png",
+        "portfolio": "https://google.com/"
+    },
+    {
+        "name": "Joris Lodewijks",
+        "role": "CTO",
+        "description": "Focusing on the technical side of the business, Lodewijks is responsible for the development of the platform and the technical infrastructure. He has a background in software development and has been working in the online gaming industry for over 10 years. Lodewijks cares about user experience and has a strong interest in the blockchain technology.",
+        "image": "joris-alt.jpg",
+        "portfolio": "https://jorislodewijks.nl/"
+    },
+    {
+        "name": "Thijs de Koning",
+        "role": "Chief Ethics Officer",
+        "description": "Ethical issues are a major concern in the AI industry. De Koning is responsible for the ethical development of the platform and the AI technology. He has a background in philosophy and has been working in the AI industry for over 10 years. De Koning is a strong believer in the potential of AI technology and is passionate about the future of the AI industry.",
+        "image": "thijs.png",
+        "portfolio": "http://www.dekoningdesign.nl/"
+    }
+]

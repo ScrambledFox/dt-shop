@@ -25,7 +25,7 @@ export default function Contact() {
       <Head>
         <title>{"ShapeShift - Contact"}</title>
       </Head>
-      <main className="flex flex-row ">
+      <main className="flex flex-row">
         <div className="flex-1">
           <h1 className="text-5xl">{"Contact us!"}</h1>
           <p className="mt-4">
