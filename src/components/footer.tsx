@@ -5,7 +5,7 @@ import { BsLinkedin, BsTwitter, BsFacebook } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <div className=" bg-zinc-900 text-slate-300 min-h-fit">
+    <div className=" bg-zinc-900 text-white min-h-fit">
       <div className="flex gap-32 justify-center pt-6">
         <div className="flex w-48 flex-col text-center">
           <h3 className="text-white text-xl">Products</h3>
