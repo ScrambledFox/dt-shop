@@ -3,15 +3,18 @@ import Head from "next/head";
 import Layout, { siteTitle } from "@/components/layout";
 import { Button } from "@nextui-org/react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <main className="h-full">
-        <div className="flex flex-row gap-8 mt-24 mb-28">
+      <main className="h-full w-full">
+        <div className="h-full w-full flex flex-row gap-8 mt-auto mb-auto">
           <div className="flex-1 flex flex-col gap-2">
             <h2 className="text-4xl text-slate-800">
               {"we understand that managing online presence is difficult"}
@@ -32,7 +35,11 @@ export default function Home() {
               <Button href="#" light bordered rounded auto>
                 {"Learn more"}
               </Button>
-              <Button href="#" color={"primary"} rounded>
+              <Button
+                color={"primary"}
+                rounded
+                onClick={() => router.push("/try")}
+              >
                 {"Get started"}
               </Button>
             </div>

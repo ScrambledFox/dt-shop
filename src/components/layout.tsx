@@ -1,4 +1,4 @@
-import { createTheme, NextUIProvider } from "@nextui-org/react";
+import { createTheme, NextUIProvider, Spacer } from "@nextui-org/react";
 import { SSRProvider } from "@react-aria/ssr";
 
 import Head from "next/head";
@@ -40,7 +40,10 @@ export default function Layout({ children }: LayoutProps) {
           </Head>
 
           <NavBar />
-          <main className="flex-1 w-2/3 mx-auto">{children}</main>
+          <div className="min-h-screen w-screen">
+            <Spacer y={8} />
+            <main className="h-2/3 w-2/3 flex-1 mx-auto">{children}</main>
+          </div>
           <Footer />
         </div>
       </NextUIProvider>

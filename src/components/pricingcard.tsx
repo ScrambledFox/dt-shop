@@ -1,5 +1,6 @@
-import { Card, Text } from "@nextui-org/react";
+import { Button, Card, Text } from "@nextui-org/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Feature = ({ text }: { text: String }) => {
   return (
@@ -27,6 +28,8 @@ export default function PricingCard({
   price,
   features,
 }: PricingCardProps) {
+  const router = useRouter();
+
   return (
     <Card>
       <Card.Body className={isMostPopular ? "bg-primary-50" : ""}>
@@ -40,10 +43,19 @@ export default function PricingCard({
           <p className="font-light text-gray-600 sm:text-lg dark:text-gray-500">
             {description}
           </p>
-          <div className="flex justify-center items-baseline my-8">
-            <span className="mr-2 text-5xl font-extrabold">{"€" + price}</span>
-            <span className="text-gray-500 dark:text-gray-400">/month</span>
-          </div>
+          {price !== -1 ? (
+            <div className="flex justify-center items-baseline my-8">
+              <span className="mr-2 text-5xl font-extrabold">
+                {"€" + price}
+              </span>
+              <span className="text-gray-500 dark:text-gray-400">/month</span>
+            </div>
+          ) : (
+            <div className="flex justify-center items-baseline my-8">
+              <span className="mr-2 text-5xl font-extrabold">{"Custom"}</span>
+            </div>
+          )}
+
           <ul role="list" className="m-auto mb-8 w-2/3 space-y-4 text-left">
             {features?.map((feature, index) => {
               return <Feature key={index} text={feature} />;
@@ -56,12 +68,9 @@ export default function PricingCard({
           isMostPopular ? "bg-primary-50 justify-center" : "justify-center"
         }
       >
-        <Link
-          href={"#"}
-          className="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900"
-        >
+        <Button rounded bordered onClick={() => router.push("/try")}>
           Get Started
-        </Link>
+        </Button>
       </Card.Footer>
     </Card>
   );

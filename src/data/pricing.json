@@ -22,12 +22,13 @@
     },
     {
         "title": "Premium",
-        "description": "Getting started with Shapeshift",
-        "price": 29.99,
+        "description": "Getting professional with Shapeshift",
+        "price": -1,
         "isMostPopular": false,
         "features": [
             "Everything of Standard Tier",
             "Pro-active data-cleaning service",
+            "Emergency Room support service",
             "One-on-One digital profile consultation"
         ]
     }

@@ -17,7 +17,7 @@ export default function NavBar() {
   };
 
   return (
-    <div className="h-32 flex gap-48 items-center justify-center">
+    <div className="absolute z-50 w-screen h-32 flex gap-48 items-center justify-center">
       <div className="flex flex-shrink flex-grow-1">
         <Link
           className="flex gap-4 text-slate-900 transition duration-300 ease-in-out transform hover:scale-105"
@@ -37,7 +37,7 @@ export default function NavBar() {
             <Dropdown.Item key="api">{"Shapeshift API"}</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
-        <Button auto light onClick={() => router.push("/pricing")}>
+        <Button auto rounded light onClick={() => router.push("/pricing")}>
           {"Pricing"}
         </Button>
         <Dropdown>
@@ -47,7 +47,7 @@ export default function NavBar() {
             <Dropdown.Item key="culture">{"Our culture"}</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
-        <Button auto light onClick={() => router.push("/contact")}>
+        <Button auto rounded light onClick={() => router.push("/contact")}>
           {"Contact us"}
         </Button>
       </div>

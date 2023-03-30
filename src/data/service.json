@@ -1,0 +1,53 @@
+{
+    "goals": [
+        {
+            "value": "skill",
+            "label": "Increase my skill in..."
+        },
+        {
+            "value": "looks",
+            "label": "Make me look better in..."
+        },
+        {
+            "value": "become",
+            "label": "I want to become more..."
+        }
+    ],
+    "platforms": [
+        {
+            "value": "linkedin",
+            "label": "LinkedIn"
+        },
+        {
+            "value": "facebook",
+            "label": "Facebook"
+        },
+        {
+            "value": "twitter",
+            "label": "Twitter"
+        },
+        {
+            "value": "instagram",
+            "label": "Instagram"
+        },
+        {
+            "value": "youtube",
+            "label": "YouTube"
+        },
+        {
+            "value": "reddit",
+            "label": "Reddit"
+        },
+        {
+            "value": "blogger",
+            "label": "Blogger"
+        },
+        {
+            "value": "tumblr",
+            "label": "Tumblr"
+        }
+    ],
+    "strength": {
+        "maxStrength": 4
+    }
+}

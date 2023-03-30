@@ -13,7 +13,7 @@ export default function Team() {
       <Head>
         <title>{"ShapeShift - Team"}</title>
       </Head>
-      <main>
+      <main className="mb-8">
         <Grid.Container gap={2} justify="center">
           {TeamData.map((data, index) => {
             return (
