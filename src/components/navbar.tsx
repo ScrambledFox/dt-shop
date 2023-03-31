@@ -23,7 +23,7 @@ export default function NavBar() {
           className="flex gap-4 text-slate-900 transition duration-300 ease-in-out transform hover:scale-105"
           href={"/"}
         >
-          <h1>{"ShapeShift"}</h1>
+          <h1>{"SHAPESHIFT"}</h1>
           <Image src={"/logo/logo.svg"} width={64} height={64} alt={"Logo"} />
         </Link>
       </div>

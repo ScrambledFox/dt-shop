@@ -17,6 +17,15 @@ module.exports = {
           900: "#1e3a8a",
         },
       },
+      keyframes: {
+        "fade-in": {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+      },
+      animation: {
+        "fade-in": "fade-in 0.5s ease-in-out",
+      },
       backgroundImage: {
         "gradient-texture": "url('/bg.svg')",
       },

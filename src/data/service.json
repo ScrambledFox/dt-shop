@@ -47,7 +47,26 @@
             "label": "Tumblr"
         }
     ],
-    "strength": {
-        "maxStrength": 4
-    }
+    "strength": [
+        {
+            "value": 0,
+            "label": "Very little"
+        },
+        {
+            "value": 1,
+            "label": "A little"
+        },
+        {
+            "value": 2,
+            "label": "Medium"
+        },
+        {
+            "value": 3,
+            "label": "A lot"
+        },
+        {
+            "value": 4,
+            "label": "Very much"
+        }
+    ]
 }
