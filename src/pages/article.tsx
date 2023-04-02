@@ -4,7 +4,14 @@ import Layout from "../components/layout";
 import Head from "next/head";
 import { Spacer } from "@nextui-org/react";
 
-export default function Article({ article }: { article: any }) {
+export type Article = {
+  title: string;
+  author: string;
+  date: string;
+  body: [];
+};
+
+export default function Article({ article }: { article: Article }) {
   return (
     <Layout>
       <Head>
