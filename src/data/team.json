@@ -3,22 +3,22 @@
         "name": "Mats Erdkamp",
         "role": "CEO",
         "description": "Erdkamp has lead multiple innovative companies in the AI and blockchain space. He is a serial entrepreneur and has been involved in the development of several successful startups. Erdkamp is a strong believer in the potential of blockchain technology and is passionate about the future of the AI industry.",
-        "image": "mats.png",
-        "portfolio": "https://google.com/"
+        "image": "mats.jpg",
+        "portfolio": "https://www.linkedin.com/in/mats-erdkamp/"
     },
     {
         "name": "Nikki Mureau",
         "role": "COO",
         "description": "Mureau has a passion in leadership and management. She is responsible for the day-to-day operations of the company and is a strong believer in the potential of blockchain technology. Mureau has a background in business management for over 10 years.",
-        "image": "nikki.png",
-        "portfolio": "https://google.com/"
+        "image": "nikki.jpg",
+        "portfolio": "https://portfolio-2021-2d5642.webflow.io/"
     },
     {
         "name": "Davide Stefani",
         "role": "CFO",
         "description": "Stefani is responsible for the financial management of the company. He has a background in finance from the school of business in Milano and has been working in the financial industry for over 10 years. Stefani is a strong believer in the potential of blockchain technology and is passionate about the future of the AI industry.",
-        "image": "davide.png",
-        "portfolio": "https://google.com/"
+        "image": "davide.jpg",
+        "portfolio": "/davideportfolio"
     },
     {
         "name": "Joris Lodewijks",
@@ -31,7 +31,7 @@
         "name": "Thijs de Koning",
         "role": "CMO",
         "description": "Ethical issues are a major concern in the AI industry. De Koning is responsible for the ethical development of the platform and the AI technology. He has a background in philosophy and has been working in the AI industry for over 10 years. De Koning is a strong believer in the potential of AI technology and is passionate about the future of the AI industry.",
-        "image": "thijs.png",
+        "image": "thijs.jpg",
         "portfolio": "http://www.dekoningdesign.nl/"
     }
 ]

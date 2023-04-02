@@ -3,11 +3,16 @@ import React from "react";
 
 import { BsLinkedin, BsTwitter, BsFacebook } from "react-icons/bs";
 
+import ArticleOne from "@/data/article1.json";
+import ArticleTwo from "@/data/article2.json";
+import ArticleThree from "@/data/article3.json";
+import ArticleFour from "@/data/article4.json";
+
 export default function Footer() {
   return (
     <div className=" bg-zinc-900 text-white min-h-fit">
       <div className="flex gap-32 justify-center pt-6">
-        <div className="flex w-48 flex-col text-center">
+        <div className="flex gap-3 w-48 flex-col text-center">
           <h3 className="text-white text-xl">Products</h3>
           <Link className="hover:text-zinc-100" href={"/transformation"}>
             Digital Twin Transformation
@@ -16,7 +21,7 @@ export default function Footer() {
             ShapeShift API
           </Link>
         </div>
-        <div className="flex w-48 flex-col text-center">
+        <div className="flex gap-3 w-48 flex-col text-center">
           <h3 className="text-white text-xl">Company</h3>
           <Link className="hover:text-zinc-100" href={"/team"}>
             Our team
@@ -31,19 +36,19 @@ export default function Footer() {
             User Policy
           </Link>
         </div>
-        <div className="flex w-48 flex-col text-center">
+        <div className="flex gap-3 w-48 flex-col text-center">
           <h3 className="text-white text-xl">Latest posts</h3>
-          <Link className="hover:text-zinc-100" href={""}>
-            Post 1
+          <Link className="hover:text-zinc-100" href={"/article1"}>
+            {ArticleOne.title}
           </Link>
-          <Link className="hover:text-zinc-100" href={""}>
-            Post 2
+          <Link className="hover:text-zinc-100" href={"/article2"}>
+            {ArticleTwo.title}
           </Link>
-          <Link className="hover:text-zinc-100" href={""}>
-            Post 3
+          <Link className="hover:text-zinc-100" href={"/article3"}>
+            {ArticleThree.title}
           </Link>
-          <Link className="hover:text-zinc-100" href={""}>
-            Post 4
+          <Link className="hover:text-zinc-100" href={"/article4"}>
+            {ArticleFour.title}
           </Link>
         </div>
       </div>

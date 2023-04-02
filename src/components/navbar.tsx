@@ -31,10 +31,10 @@ export default function NavBar() {
         <Dropdown>
           <Dropdown.Button light>{"Products"}</Dropdown.Button>
           <Dropdown.Menu aria-label="products" onAction={dropdownNavigate}>
-            <Dropdown.Item key="transformation">
+            <Dropdown.Item key="try">
               {"Digital Twin Transformation"}
             </Dropdown.Item>
-            <Dropdown.Item key="api">{"Shapeshift API"}</Dropdown.Item>
+            <Dropdown.Item key="apiservice">{"Shapeshift API"}</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
         <Button auto rounded light onClick={() => router.push("/pricing")}>
