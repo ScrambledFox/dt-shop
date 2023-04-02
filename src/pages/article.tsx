@@ -8,7 +8,7 @@ export type Article = {
   title: string;
   author: string;
   date: string;
-  body: [];
+  body: { type: string; content: string }[];
 };
 
 export default function Article({ article }: { article: Article }) {
