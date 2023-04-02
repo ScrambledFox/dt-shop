@@ -1,5 +1,5 @@
 import React from "react";
-import Article from "./article";
+import Article from "@/components/article";
 
 import data from "@/data/article3.json";
 
