@@ -1,10 +1,4 @@
-import React, {
-  ChangeEventHandler,
-  DetailedHTMLProps,
-  InputHTMLAttributes,
-  useCallback,
-  useEffect,
-} from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import Layout from "@/components/layout";
 import Head from "next/head";
@@ -34,62 +28,78 @@ type OOCSIResponse = {
 };
 
 export default function Try() {
-  const [clientHandle, setClientHandle] = React.useState<string>(uuidv4());
-  const [answer, setAnswer] = React.useState<Answer | null>(null);
-  const [prompting, setPrompting] = React.useState<boolean>(false);
+  const [clientHandle, setClientHandle] = useState<string>(uuidv4());
+  const [answer, setAnswer] = useState<Answer | null>(null);
 
-  const [goal, setGoal] = React.useState<Goal>("skill");
-  const [detail, setDetail] = React.useState<string>("");
-  const [platform, setPlatform] = React.useState<string>("");
-  const [strength, setStrength] = React.useState<Strength>(2);
+  const [goal, setGoal] = useState<Goal>("skill");
+  const [detail, setDetail] = useState<string>("");
+  const [platform, setPlatform] = useState<string>("");
+  const [strength, setStrength] = useState<Strength>(2);
+
+  const [lastPrompt, setLastPrompt] = useState<string | null>(null);
 
   const router = useRouter();
 
-  const reset = () => {
+  const reset = useCallback(() => {
     setAnswer(null);
-    setPrompting(false);
-  };
+    setLastPrompt(null);
+  }, []);
 
-  const sendPrompt = (prompt: string) => {
+  const sendPrompt = async (prompt: string) => {
+    await setLastPrompt(prompt);
+    console.log(prompt);
     OOCSI.send("callChatAPI", { input: prompt });
-    setPrompting(true);
-    console.log("Sent prompt: " + prompt);
   };
 
-  const handleResponse = useCallback(
-    (data: OOCSIResponse) => {
-      console.log(data);
+  const rerouteToServiceDown = (
+    data: OOCSIResponse | null,
+    prompt: string | null
+  ) => {
+    console.log("Prompt", prompt);
 
-      const text = data.data.text;
-      const id = getIdFromResponse(text);
-
-      // Not our response
-      console.log(id, clientHandle);
-      if (id !== clientHandle) return;
-
-      // Yes, we got our response
-      setPrompting(false);
-      setAnswer({
-        data: data.data.text.split("\n"),
+    setTimeout(() => {
+      router.push({
+        pathname: "/service-down",
+        query: {
+          prompt: JSON.stringify(prompt),
+          taskHandleId: clientHandle,
+          receivedMessage: JSON.stringify(data),
+        },
       });
+    }, 5000);
+  };
 
-      console.log("Received answer: " + JSON.stringify(data));
-      console.log(answer);
-    },
-    [answer, clientHandle]
-  );
+  const handleResponse = (data: OOCSIResponse) => {
+    console.log(data, lastPrompt);
+
+    const text = data.data.text;
+    const receivedTaskId = getIdFromResponse(text);
+
+    if (text === undefined) {
+      rerouteToServiceDown(data, (" " + lastPrompt).slice(1));
+    }
+
+    // Not our response
+    if (receivedTaskId !== clientHandle) return;
+
+    // Yes, we got our response
+    setLastPrompt(null);
+
+    setAnswer({
+      data: data.data.text.split("\n"),
+    });
+
+    console.log("Received answer: " + JSON.stringify(data));
+  };
 
   useEffect(() => {
     if (OOCSI.isConnected()) return;
 
     OOCSI.connect("wss://oocsi.id.tue.nl/ws", clientHandle);
-
-    console.log(clientHandle);
-
     OOCSI.subscribe("returnChatAPI", (data: OOCSIResponse) => {
       handleResponse(data);
     });
-  }, [answer, clientHandle, handleResponse]);
+  });
 
   const handleGoalChange = (
     newValue: SingleValue<{
@@ -142,7 +152,7 @@ export default function Try() {
         <title>{"ShapeShift - Try"}</title>
       </Head>
       <main>
-        {!prompting && answer === null && (
+        {lastPrompt === null && answer === null && (
           <>
             <div className="justify-center text-center">
               <h1>{"Try out the ShapeShift service!"}</h1>
@@ -155,16 +165,6 @@ export default function Try() {
             <Spacer y={2} />
             <div>
               <form>
-                {/* <label className="text-2xl mr-4" htmlFor="name">
-              Name
-            </label>
-            <input
-              className="rounded-xl p-2 focus:p-3 transition-all duration-300"
-              type="text"
-              id="name"
-              name="name"
-            /> */}
-
                 <div className="flex flex-row mt-4">
                   <label className="flex-1" htmlFor="goal">
                     {"How do you want to enhance yourself?"}
@@ -218,7 +218,7 @@ export default function Try() {
                   <Button
                     rounded
                     className="m-auto -z-0"
-                    onClick={() =>
+                    onClick={() => {
                       sendPrompt(
                         generatePrompt(
                           goal,
@@ -227,8 +227,8 @@ export default function Try() {
                           strength,
                           clientHandle
                         )
-                      )
-                    }
+                      );
+                    }}
                   >
                     Become the real you 🚀
                   </Button>
@@ -240,11 +240,14 @@ export default function Try() {
           </>
         )}
 
-        {prompting && answer === null && (
+        {lastPrompt !== null && answer === null && (
           <>
             <Spacer y={10} />
             <div className="w-full animate-fade-in justify-center text-center">
               <Loading size="xl">{"Transforming your life..."}</Loading>
+            </div>
+            <div className=" justify-center text-center">
+              {lastPrompt !== null && <p>{lastPrompt}</p>}
             </div>
           </>
         )}

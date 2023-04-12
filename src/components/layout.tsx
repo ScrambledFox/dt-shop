@@ -1,5 +1,4 @@
 import { createTheme, NextUIProvider, Spacer } from "@nextui-org/react";
-import { SSRProvider } from "@react-aria/ssr";
 
 import Head from "next/head";
 import { Component, ReactNode } from "react";
